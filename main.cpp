@@ -1,17 +1,18 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
-
 using namespace std;
 using namespace cv;
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv)
+{
 
     // Load the video file
     VideoCapture cap("../android-vm.webm");
 
     // Check if the video file was opened successfully
-    if (!cap.isOpened()) {
+    if (!cap.isOpened())
+    {
         cerr << "Error: could not open video file" << endl;
         return -1;
     }
@@ -20,14 +21,16 @@ int main(int argc, char** argv) {
     namedWindow("Video", WINDOW_NORMAL);
 
     // Loop over the video frames and display them in the window
-    while (true) {
+    while (true)
+    {
 
         // Read the next frame from the video file
         Mat frame;
         cap.read(frame);
 
         // Check if the frame was read successfully
-        if (frame.empty()) {
+        if (frame.empty())
+        {
             break;
         }
 
@@ -35,7 +38,8 @@ int main(int argc, char** argv) {
         imshow("Video", frame);
 
         // Wait for a key press (or 30 milliseconds) to allow the frame to be displayed
-        if (waitKey(30) >= 0) {
+        if (waitKey(30) >= 0)
+        {
             break;
         }
     }
