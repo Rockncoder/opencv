@@ -10,7 +10,7 @@ int main(int argc, char **argv)
     // Load the video file
     VideoCapture cap("../android-vm.webm");
 
-    // Check if the video file was opened successfully
+    // Check if the video file was opened successfully!
     if (!cap.isOpened())
     {
         cerr << "Error: could not open video file" << endl;
