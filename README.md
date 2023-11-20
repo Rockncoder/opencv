@@ -41,4 +41,10 @@ This is based on project is based on `Elliotcodes` YouTube video `How to Setup O
     * Remote Explore
 
 ### Building, Debugging, and Running ###
-
+1. CMake: Select a Kit,
+    1. Select: Clang 13.0.0
+    1. This will create a build folder
+1. CMake: Select a Variant
+    1. Select Debug (typical while developing)
+1. CMake: Configure
+1. Build 
